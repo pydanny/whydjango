@@ -1,0 +1,12 @@
+*.pyc
+.DS_Store*
+*/.DS_Store
+*.*.sw*
+bin/**
+develop-eggs/**
+eggs/***
+parts/**
+downloads/**
+src/whydjango.egg-info/**
+.installed.cfg
+local_settings.py
