@@ -70,7 +70,7 @@ LOGOUT_URL = '/logout/'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, "templates"),
-    )
+    )    
     
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',

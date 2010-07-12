@@ -18,14 +18,14 @@ class BaseModel(StandardModel):
         abstract = True
         
     def __unicode__(self): 
-        return self.title
+        return self.slug
         
 
 class CaseStudy(BaseModel):
     tags = models.CharField(max_length=100)
     authors = models.ManyToManyField(User)
     body = models.TextField(_('body')) 
-    pub_date = models.DateTimeField(_('date posted'), default=datetime.datetime.today)    
+    pub_date = models.DateTimeField(_('date posted'), default=datetime.datetime.today)
 
     tags            = TaggableManager()
     
@@ -34,6 +34,8 @@ class CaseStudy(BaseModel):
         return ('case_study', (), {'slug': self.slug})
 
     class Meta:
+        get_latest_by = 'title'
+        ordering = ['title']        
         verbose_name = _('Case Study')
         verbose_name_plural = _('Case Studies')
         
