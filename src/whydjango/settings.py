@@ -44,7 +44,6 @@ STATIC_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "static"))
 
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
-# Make this unique, and don't share it with anybody.
 SECRET_KEY = 'd^5@ux-(-r7-*y791uwun(xq+h7p+=##9&jv#p627$eud!^6bd'
 
 # List of callables that know how to import templates from various sources.
@@ -89,7 +88,6 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'debug_toolbar',
     'taggit',
-    'whydjango.articles',
     'whydjango.case_studies',    
 )
 
