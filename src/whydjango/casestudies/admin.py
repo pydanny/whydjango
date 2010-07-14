@@ -1,6 +1,6 @@
 from django.contrib import admin 
 
-from whydjango.case_studies.models import CaseStudy, CaseStudyImage
+from whydjango.casestudies.models import CaseStudy, CaseStudyImage
 
 
 class CaseStudyAdmin(admin.ModelAdmin):

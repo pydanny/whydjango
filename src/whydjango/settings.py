@@ -88,7 +88,7 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'debug_toolbar',
     'taggit',
-    'whydjango.case_studies',    
+    'whydjango.casestudies',    
 )
 
 DEBUG_TOOLBAR_PANELS = (
