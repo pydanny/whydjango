@@ -12,6 +12,6 @@ urlpatterns = patterns('',
     # to INSTALLED_APPS to enable admin documentation:
     # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
-    (r'^case-studies/', include('whydjango.casestudies.urls')),
+    (r'^casestudies/', include('whydjango.casestudies.urls')),
     (r'^admin/', include(admin.site.urls)),
 )

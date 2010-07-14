@@ -22,6 +22,7 @@ class BaseModel(StandardModel):
         
 
 class CaseStudy(BaseModel):
+    url = models.URLField(_('url'), blank=True, default='')
     tags = models.CharField(max_length=100)
     authors = models.ManyToManyField(User)
     body = models.TextField(_('body')) 
