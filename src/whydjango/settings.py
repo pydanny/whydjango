@@ -32,8 +32,8 @@ LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
-# If you set this to False, Django will make some optimizations so as not
-# to load the internationalization machinery.
+INTERNAL_IPS = ('127.0.0.1',)
+
 USE_I18N = True
 
 MEDIA_URL = '/static/'
@@ -60,6 +60,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',    
 )
 
 ROOT_URLCONF = 'whydjango.urls'
