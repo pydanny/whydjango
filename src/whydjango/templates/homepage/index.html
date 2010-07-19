@@ -1,0 +1,42 @@
+<html>
+<head>
+{% block head %}
+    <title>Why Django</title>
+    
+    {% for css in css_items %}
+        <style type="text/css" media="screen">
+            {{ css.content }}
+        </style>
+    {% endfor %}
+    
+    {% for js in js_items %}
+        <script type="text/javascript">
+            {{ js.content }}
+        </script>
+    {% endfor %}
+     
+{% endblock head %}
+</head>
+
+<body>    
+    
+{% block content %}
+
+<!-- top links -- >
+<ul>  
+    {% for link in links %}
+        <li><a id="{{ link.title|slugify }}" href="/{{ link.title|slugify }}">{{ link.title }}</a></li>    
+    {% endfor %}
+</ul>
+
+{% for html in html_items %}
+    <div id="{{ html.title|slugify }}">
+        {{ html.content|safe }}
+    </div>
+{% endfor %}
+
+
+{% endblock content %}
+
+</body>
+</html>
