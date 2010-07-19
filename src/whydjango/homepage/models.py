@@ -1,6 +1,5 @@
 import datetime
 
-from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _ 
 
@@ -13,19 +12,6 @@ ELEMENT_TYPE = (
         ('js', 'JavaScript'),        
         ('html', 'HTML'),
     )
-
-class TopLink(StandardModel):
-    
-    title       = models.CharField(_('Title'), max_length=100)
-    slug        = AutoSlugField(_('Slug'), populate_from='title')
-    description = models.TextField(_('Description'), blank=False, default='')
-    order       = models.IntegerField(_('order'))
-    
-    class Meta:
-        ordering = ('order',)
-
-    def __unicode__(self):
-        return self.title
         
 class ContentManager(models.Manager):
     
@@ -40,10 +26,10 @@ class ContentManager(models.Manager):
 
 class Content(StandardModel):
     
-    title           = models.CharField(_('Title'), max_length=100)
+    title           = models.CharField(_('Title'), max_length=100, blank=True, default='')
     element_type    = models.CharField(_('Element Type'), choices=ELEMENT_TYPE, max_length=100)
     order           = models.IntegerField(_('order'))        
-    content         = models.TextField(_('Content'))
+    content         = models.TextField(_('Content'), blank=True, default='')
     
     objects = ContentManager()
     

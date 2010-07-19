@@ -90,6 +90,7 @@ INSTALLED_APPS = (
     'taggit',
     'whydjango.casestudies',
     'whydjango.homepage',
+    'whydjango.core',    
 )
 
 DEBUG_TOOLBAR_PANELS = (

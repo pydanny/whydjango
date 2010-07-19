@@ -1,0 +1,5 @@
+<ul>  
+    {% for link in links %}
+        <li><a id="{{ link.title|slugify }}" href="/{{ link.title|slugify }}">{{ link.title }}</a></li>    
+    {% endfor %}
+</ul>

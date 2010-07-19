@@ -8,5 +8,5 @@ urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     
     (r'^casestudies/', include('whydjango.casestudies.urls')),
-    (r'^/', include('whydjango.homepage.urls')), 
+    (r'^', include('whydjango.homepage.urls')), 
 )

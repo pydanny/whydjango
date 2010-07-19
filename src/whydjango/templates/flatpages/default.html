@@ -1,11 +1,17 @@
 {% extends 'base.html' %}
+
+{% load core_tags %}
+
 {% block head %}
 <title>{{ flatpage.title }}</title>
 {% endblock %}
 
 {% block content %}
 
+{% top_links %}
+
 <h1>{{ flatpage.title }}</h1>
+
 {{ flatpage.content }}
 
 {% endblock content %}

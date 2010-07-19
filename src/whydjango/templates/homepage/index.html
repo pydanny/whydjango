@@ -1,5 +1,7 @@
-<html>
-<head>
+{% extends 'base.html' %}
+
+{% load core_tags %}
+
 {% block head %}
     <title>Why Django</title>
     
@@ -16,27 +18,18 @@
     {% endfor %}
      
 {% endblock head %}
-</head>
-
-<body>    
     
 {% block content %}
 
-<!-- top links -- >
-<ul>  
-    {% for link in links %}
-        <li><a id="{{ link.title|slugify }}" href="/{{ link.title|slugify }}">{{ link.title }}</a></li>    
-    {% endfor %}
-</ul>
+{% top_links %}
 
 {% for html in html_items %}
+    
     <div id="{{ html.title|slugify }}">
+        <h1>{{ html.title }}</h1>
         {{ html.content|safe }}
     </div>
 {% endfor %}
 
 
 {% endblock content %}
-
-</body>
-</html>
