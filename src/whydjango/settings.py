@@ -36,8 +36,8 @@ INTERNAL_IPS = ('127.0.0.1',)
 
 USE_I18N = True
 
-MEDIA_URL = '/static/'
-MEDIA_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "static"))
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "media"))
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "static"))
@@ -88,6 +88,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.markup',
     'debug_toolbar',
+    'social_bookmarking',    
     'taggit',
     'whydjango.casestudies',
     'whydjango.homepage',
@@ -109,6 +110,14 @@ DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
     'HIDE_DJANGO_SQL': False,
 }
+
+TEMPLATE_CONTEXT_PROCESSORS = ( 
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.request',
+    'django.core.context_processors.media',
+)
+
 
 try:
     

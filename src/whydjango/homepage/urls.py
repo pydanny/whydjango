@@ -5,7 +5,7 @@ from whydjango.homepage.views import homepage
 urlpatterns = patterns('',
 
     url(
-        regex   = '',
+        regex   = '^$',
         view    = homepage, 
         name    = 'homepage',
     ),
