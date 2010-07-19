@@ -29,11 +29,11 @@ class login(object):
 
 class BaseTestCase(TestCase):
     """
-    Setup default StoryMarket test case
+    Setup default whydjango test case
     """
 
-    fixtures = ['testauthdata', 'initial_metrics']
-    urls = 'storymarket.urls'
+    fixtures = ['initial_data.json']
+    urls = 'whydjango.urls'
 
     def setUp(self):
         u = User.objects.get(username='testclient')
