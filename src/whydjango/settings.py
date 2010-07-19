@@ -106,3 +106,9 @@ DEBUG_TOOLBAR_CONFIG = {
     'INTERCEPT_REDIRECTS': False,
     'HIDE_DJANGO_SQL': False,
 }
+
+try:
+    
+    from local_settings import *
+except ImportError:
+    pass
