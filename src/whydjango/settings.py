@@ -60,7 +60,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',    
 )
 
 ROOT_URLCONF = 'whydjango.urls'
@@ -87,29 +86,15 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.markup',
-    'debug_toolbar',
     'social_bookmarking',    
     'taggit',
+    'django_wysiwyg',
     'whydjango.casestudies',
     'whydjango.homepage',
     'whydjango.core',    
 )
 
-DEBUG_TOOLBAR_PANELS = (
-    'debug_toolbar.panels.timer.TimerDebugPanel',
-    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
-    'debug_toolbar.panels.headers.HeaderDebugPanel',
-    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
-    'debug_toolbar.panels.template.TemplateDebugPanel',
-    'debug_toolbar.panels.sql.SQLDebugPanel',
-    'debug_toolbar.panels.signals.SignalDebugPanel',
-    'debug_toolbar.panels.logger.LoggingPanel',
-)
 
-DEBUG_TOOLBAR_CONFIG = { 
-    'INTERCEPT_REDIRECTS': False,
-    'HIDE_DJANGO_SQL': False,
-}
 
 TEMPLATE_CONTEXT_PROCESSORS = ( 
     'django.contrib.auth.context_processors.auth',
@@ -117,6 +102,29 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.core.context_processors.media',
 )
+
+if DEBUG:
+    
+    MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+    
+    INSTALLED_APPS += ('debug_toolbar',)
+    
+    DEBUG_TOOLBAR_PANELS = (
+        'debug_toolbar.panels.timer.TimerDebugPanel',
+        'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
+        'debug_toolbar.panels.headers.HeaderDebugPanel',
+        'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
+        'debug_toolbar.panels.template.TemplateDebugPanel',
+        'debug_toolbar.panels.sql.SQLDebugPanel',
+        'debug_toolbar.panels.signals.SignalDebugPanel',
+        'debug_toolbar.panels.logger.LoggingPanel',
+    )
+
+    DEBUG_TOOLBAR_CONFIG = { 
+        'INTERCEPT_REDIRECTS': False,
+        'HIDE_DJANGO_SQL': False,
+    }    
+    
 
 
 try:

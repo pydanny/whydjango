@@ -1,1 +1,199 @@
-[{"pk": 5, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "DZone", "url": "http://www.dzone.com/links/add.html?url=%(url)s&title=%(title)s", "image": "dzone.png", "js": ""}}, {"pk": 15, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "Digg", "url": "http://digg.com/submit?phase=2&url=%(url)s&title=%(title)s", "image": "digg.png", "js": ""}}, {"pk": 12, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "Facebook", "url": "http://www.facebook.com/share.php?u=%(url)s&t=%(title)s", "image": "facebook.png", "js": ""}}, {"pk": 9, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "Fark", "url": "http://cgi.fark.com/cgi/fark/farkit.pl?h=%(title)s&u=%(url)s", "image": "fark.png", "js": ""}}, {"pk": 8, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "Google", "url": "http://www.google.com/bookmarks/mark?op=edit&bkmk=%(url)s&title=%(title)s", "image": "googlebookmark.png", "js": ""}}, {"pk": 4, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "Print", "url": "javascript:window.print();", "image": "printer.png", "js": ""}}, {"pk": 7, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "Reddit", "url": "http://reddit.com/submit?url=%(url)s&title=%(title)s", "image": "reddit.png", "js": ""}}, {"pk": 14, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "Slashdot", "url": "http://slashdot.org/bookmark.pl?title=%(title)s&url=%(url)s", "image": "slashdot.png", "js": ""}}, {"pk": 6, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "StumbleUpon", "url": "http://www.stumbleupon.com/submit?url=%(url)s&title=%(title)s", "image": "stumbleupon.png", "js": ""}}, {"pk": 10, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "Technorati", "url": "http://technorati.com/faves?add=%(url)s", "image": "technorati.png", "js": ""}}, {"pk": 2, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "YCombinator", "url": "http://news.ycombinator.com/submitlink?u=%(url)s&t=%(title)s", "image": "yc.gif", "js": ""}}, {"pk": 11, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "YahooBuzz", "url": "http://buzz.yahoo.com/submit/?submitUrl=%(url)s&submitHeadline=%(title)s&submitSummary=%(description)s&submitCategory=science&submitAssetType=text", "image": "yahoobuzz.gif", "js": ""}}, {"pk": 13, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "YahooMyWeb", "url": "http://myweb2.search.yahoo.com/myresults/bookmarklet?u=%(url)s&=%(title)s", "image": "yahoomyweb.png", "js": ""}}, {"pk": 3, "model": "social_bookmarking.bookmark", "fields": {"status": 2, "description": "", "title": "del.icio.us", "url": "http://del.icio.us/post?url=%(url)s&title=%(title)s", "image": "delicious.png", "js": ""}}]
+
+[
+    {
+        "pk": 5,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "DZone",
+             "url": "http://www.dzone.com/links/add.html?url=%(url)s&title=%(title)s",
+             "image": "dzone.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 15,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "Digg",
+             "url": "http://digg.com/submit?phase=2&url=%(url)s&title=%(title)s",
+             "image": "digg.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 12,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "Facebook",
+             "url": "http://www.facebook.com/share.php?u=%(url)s&t=%(title)s",
+             "image": "facebook.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 9,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "Fark",
+             "url": "http://cgi.fark.com/cgi/fark/farkit.pl?h=%(title)s&u=%(url)s",
+             "image": "fark.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 8,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "Google",
+             "url": "http://www.google.com/bookmarks/mark?op=edit&bkmk=%(url)s&title=%(title)s",
+             "image": "googlebookmark.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 4,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "Print",
+             "url": "javascript:window.print();",
+             "image": "printer.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 7,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "Reddit",
+             "url": "http://reddit.com/submit?url=%(url)s&title=%(title)s",
+             "image": "reddit.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 14,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "Slashdot",
+             "url": "http://slashdot.org/bookmark.pl?title=%(title)s&url=%(url)s",
+             "image": "slashdot.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 6,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "StumbleUpon",
+             "url": "http://www.stumbleupon.com/submit?url=%(url)s&title=%(title)s",
+             "image": "stumbleupon.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 10,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "Technorati",
+             "url": "http://technorati.com/faves?add=%(url)s",
+             "image": "technorati.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 2,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "YCombinator",
+             "url": "http://news.ycombinator.com/submitlink?u=%(url)s&t=%(title)s",
+             "image": "yc.gif",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 11,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "YahooBuzz",
+             "url": "http://buzz.yahoo.com/submit/?submitUrl=%(url)s&submitHeadline=%(title)s&submitSummary=%(description)s&submitCategory=science&submitAssetType=text",
+             "image": "yahoobuzz.gif",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 13,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "YahooMyWeb",
+             "url": "http://myweb2.search.yahoo.com/myresults/bookmarklet?u=%(url)s&=%(title)s",
+             "image": "yahoomyweb.png",
+             "js": ""
+        }
+    },
+     
+    {
+        "pk": 3,
+         "model": "social_bookmarking.bookmark",
+         "fields": 
+        {
+            "status": 2,
+             "description": "",
+             "title": "del.icio.us",
+             "url": "http://del.icio.us/post?url=%(url)s&title=%(title)s",
+             "image": "delicious.png",
+             "js": ""
+        }
+    }
+]
+

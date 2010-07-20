@@ -25,7 +25,7 @@ class CaseStudy(BaseModel):
     url = models.URLField(_('url'), blank=True, default='')
     tags = models.CharField(max_length=100)
     authors = models.ManyToManyField(User)
-    body = models.TextField(_('body')) 
+    content = models.TextField(_('content')) 
     pub_date = models.DateTimeField(_('date posted'), default=datetime.datetime.today)
 
     tags            = TaggableManager()
