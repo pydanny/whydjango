@@ -89,6 +89,7 @@ INSTALLED_APPS = (
     'social_bookmarking',    
     'taggit',
     'django_wysiwyg',
+    'whydjango.books',    
     'whydjango.casestudies',
     'whydjango.homepage',
     'whydjango.core',    
@@ -124,8 +125,6 @@ if DEBUG:
         'INTERCEPT_REDIRECTS': False,
         'HIDE_DJANGO_SQL': False,
     }    
-    
-
 
 try:
     

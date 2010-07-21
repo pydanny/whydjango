@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     url(
         regex = '^$',
         view    = object_list, 
-        name = 'case_study_index',
+        name = 'casestudies',
         kwargs=dict(
             queryset=CaseStudy.objects.all(),
             template_name='casestudies/index.html',

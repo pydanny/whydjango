@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load core_tags %}
+
+{% block head %}
+<title>Books</title>
+{% endblock %}
+
+{% block content %}
+
+{% top_links %}
+
+<h1>Books</h1>
+
+
+{% for object in object_list %}
+    <h2>{{ object.title }}</h2>
+    <p>
+       By: {{ object.authors }} 
+       <br>
+       {{ object.book_type }}: {{ object.length }} pages
+       <br>
+       Release date: {{ object.release_date }}
+       <br>
+       Language: {{ object.language }}
+       <br>
+       ISBN: {{ object.ISBN }}
+       <br>
+       ISBN: {{ object.ISBN_13 }}
+    </p>
+    <p>
+        {% with object.get_first_order_link as first_link %}
+            <a href="{{ first_link.link }}" rel="nofollow"><img src="{{ object.image }}"></a>
+        {% endwith %}
+        <ul>
+        {% for link in object.book_order_link.all %}
+            <li><a href="{{ link.link }}">Order now from {{ link.publisher }}</a></li>
+        {% endfor %}
+        </ul>
+    </p>
+
+{% endfor %}
+
+
+{% endblock content %}

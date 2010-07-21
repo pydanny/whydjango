@@ -6,7 +6,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
-    
+    (r'^books/', include('whydjango.books.urls')),    
     (r'^casestudies/', include('whydjango.casestudies.urls')),
     (r'', include('whydjango.homepage.urls')), 
 )
