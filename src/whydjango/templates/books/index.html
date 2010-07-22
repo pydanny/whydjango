@@ -30,7 +30,7 @@
     </p>
     <p>
         {% with object.get_first_order_link as first_link %}
-            <a href="{{ first_link.link }}" rel="nofollow"><img src="{{ object.image }}"></a>
+            <a href="{{ first_link.link }}" rel="nofollow"><img src="{{ MEDIA_URL }}{{ object.image }}"></a>
         {% endwith %}
         <ul>
         {% for link in object.book_order_link.all %}

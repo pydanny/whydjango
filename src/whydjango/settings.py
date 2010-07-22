@@ -38,6 +38,7 @@ USE_I18N = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "media"))
+print MEDIA_ROOT
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "static"))
@@ -52,6 +53,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
+
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
@@ -101,7 +103,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
     'django.core.context_processors.request',
-    'django.core.context_processors.media',
+    'django.core.context_processors.media',    
 )
 
 if DEBUG:

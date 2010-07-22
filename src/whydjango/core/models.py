@@ -8,7 +8,7 @@ from whydjango.models import StandardModel
 class TopLink(StandardModel):
     
     title       = models.CharField(_('Title'), max_length=100)
-    slug        = AutoSlugField(_('Slug'), populate_from='title')
+    slug        = models.SlugField(_('Slug'))
     description = models.TextField(_('Description'), blank=True, default='')
     order       = models.IntegerField(_('order'))
     
