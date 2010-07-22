@@ -12,7 +12,7 @@ urlpatterns = patterns('',
         name = 'case_study',
         kwargs=dict(
             queryset=CaseStudy.objects.all(),
-            template_name='casestudies/case_study.html',
+            template_name='casestudies/casestudy.html',
             )        
     ),
 

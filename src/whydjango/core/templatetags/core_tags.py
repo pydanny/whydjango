@@ -14,8 +14,16 @@ def breadcrumbs(flatpage):
     absolute_url = flatpage.get_absolute_url()
     text = ''
     url = ''
-    for element in absolute_url[1:-1].split('/'):
+    elements = absolute_url[1:-1].split('/')
+    length = len(elements) - 1
+    if length < 1:
+        return ''
+    for i, element in enumerate(elements):
         url += '/%s' % element
         flatpage = FlatPage.objects.get(url='%s/' % url)
+        if length == i:
+            text += flatpage.title
+            break
         text += '<a href="%s/">%s</a> ' % (url, flatpage.title)
+
     return text

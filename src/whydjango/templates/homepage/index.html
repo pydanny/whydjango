@@ -2,8 +2,7 @@
 
 {% load core_tags %}
 
-{% block head %}
-    <title>Why Django</title>
+{% block extrahead %}
     
     {% for css in css_items %}
         <style type="text/css" media="screen">
@@ -17,7 +16,7 @@
         </script>
     {% endfor %}
      
-{% endblock head %}
+{% endblock extrahead %}
     
 {% block content %}
 

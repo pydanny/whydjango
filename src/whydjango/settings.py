@@ -38,7 +38,6 @@ USE_I18N = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "media"))
-print MEDIA_ROOT
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "static"))

@@ -1,3 +1,21 @@
+{% extends 'base.html' %}
+
+{% load core_tags %}
+
+{% block title %}Case Studies{% endblock title %}
+
+{% block content %}
+
+{% top_links %}
+
+<h1>Case Studies</h1>
+
 {% for object in object_list %}
-    <a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+    <p>
+        <a href="{{ object.get_absolute_url }}">{{ object.title }}</a>
+        <br>
+        {{ object.description }}
+    </p>
 {% endfor %}
+
+{% endblock content %}

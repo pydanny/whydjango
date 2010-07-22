@@ -1,7 +1,26 @@
-<h1><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h1>
+{% extends 'base.html' %}
 
-<p class="pub_date">{{ object.pub_date }}</p>
+{% load core_tags %}
+
+{% block title %}Case Study for {{ object.title }}{% endblock title %}
+
+{% block content %}
+
+{% top_links %}
+
+<h1>Case Study for <a href="{{ object.url }}">{{ object.title }}</a></h1>
+
+<div id="breadcrumbs">
+    
+    <a href="{% url casestudies %}">Case Studies</a> {{ object.title }}
+    
+</div>
+
+
+<p class="pub_date">Posted on {{ object.pub_date|date:"SHORT_DATE_FORMAT" }}</p>
 
 <p class="description">{{ object.description }}</p>
 
-<div class="body">{{ object.body }}</div>
+<div class="body">{{ object.content|safe }}</div>
+
+{% endblock content %}
