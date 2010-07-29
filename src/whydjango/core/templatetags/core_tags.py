@@ -27,3 +27,13 @@ def breadcrumbs(flatpage):
         text += '<a href="%s/">%s</a> ' % (url, flatpage.title)
 
     return text
+    
+@register.simple_tag
+def side_nav(flatpage):
+    text = '<li><a href="%s">%s</a><ul>' % (flatpage.get_absolute_url(), flatpage.title)
+    url = flatpage.get_absolute_url()
+    for page in FlatPage.objects.filter(url__startswith=url).exclude(id=flatpage.id):
+        text += '<li><a href="%s">%s</a></li>' % (page.get_absolute_url(), page.title)
+    text += '</ul></li>'
+    return text
+    
