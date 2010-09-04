@@ -9,13 +9,17 @@
 
 {% case_study %}
 
+<h1>Why Django</h1>
+
 <div class="case-study">
         <div class="case-study-title">{{ case_study.title }}</div>
         <div class="case-study-image"><img src="{{ MEDIA_URL }}{{ case_study.image }}" /></div>                
         <div class="case-study-description">{{ case_study.description }}</div>
 </div>
 
+<div class="content">
 {{ flatpage.content|safe }}
+</div>
 
 {% show_bookmarks flatpage.title flatpage %}
 
