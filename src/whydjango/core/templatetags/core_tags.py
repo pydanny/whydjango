@@ -2,6 +2,7 @@ from django import template
 from django.contrib.flatpages.models import FlatPage
 
 from whydjango.core.models import TopLink
+from whydjango.casestudies.models import CaseStudy
 
 register = template.Library()
 
@@ -37,3 +38,21 @@ def side_nav(flatpage):
     text += '</ul></li>'
     return text
     
+#@register.simple_tag
+#def case_study():
+#    return CaseStudy.objects.get(featured=True)
+
+@register.tag
+def case_study(parser, token):
+    return CaseStudyNode()
+
+class CaseStudyNode(template.Node):
+    def __init__(self):
+        pass
+
+    def render(self, context):
+        try:
+            context['case_study'] = CaseStudy.objects.get(featured=True)
+        except CaseStudy.DoesNoExist:
+            context['case_study'] = None
+        return ""            

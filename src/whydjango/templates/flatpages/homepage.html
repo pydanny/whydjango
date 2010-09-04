@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load core_tags %}
+{% load social_bookmarking_tags %}
+    
+{% block content %}
+
+{% top_links %}
+
+{% case_study %}
+{{ case_study }}
+
+{{ flatpage.content|safe }}
+
+{% show_bookmarks flatpage.title flatpage %}
+
+
+{% endblock content %}

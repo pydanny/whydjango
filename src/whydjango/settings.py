@@ -89,10 +89,10 @@ INSTALLED_APPS = (
     'django.contrib.markup',
     'social_bookmarking',    
     'taggit',
+    'south',
     'django_wysiwyg',
     'whydjango.books',    
     'whydjango.casestudies',
-    'whydjango.homepage',
     'whydjango.core',    
 )
 

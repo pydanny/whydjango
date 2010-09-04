@@ -27,6 +27,8 @@ class CaseStudy(BaseModel):
     authors = models.ManyToManyField(User)
     content = models.TextField(_('content')) 
     pub_date = models.DateTimeField(_('date posted'), default=datetime.datetime.today)
+    featured = models.BooleanField(_("Featured on home page"), default=False)
+    image = models.ImageField(_('Image'), upload_to='case_study_images/%Y/%m/%d')
 
     tags            = TaggableManager()
     
