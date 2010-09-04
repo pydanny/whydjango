@@ -1,0 +1,1 @@
+../../bin/django dumpdata books auth flatpages sites homepage core > fixtures/initial_data.json
