@@ -8,7 +8,12 @@
 {% top_links %}
 
 {% case_study %}
-{{ case_study }}
+
+<div class="case-study">
+        <div class="case-study-title">{{ case_study.title }}</div>
+        <div class="case-study-image"><img src="{{ MEDIA_URL }}{{ case_study.image }}" /></div>                
+        <div class="case-study-description">{{ case_study.description }}</div>
+</div>
 
 {{ flatpage.content|safe }}
 
