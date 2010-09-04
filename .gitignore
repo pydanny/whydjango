@@ -10,3 +10,4 @@ downloads/**
 src/whydjango.egg-info/**
 .installed.cfg
 local_settings.py
+src/whydjango/*.db
