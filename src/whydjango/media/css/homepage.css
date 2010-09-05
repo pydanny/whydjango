@@ -1,5 +1,8 @@
-#case_studies {float:right; background:#1c475c url('../img/sidecol_gradient.png') repeat-y; width:410px;}
+#right_side_col {float:right; background:#1c475c url('../img/sidecol_gradient.png') repeat-y; width:410px;}
+
+#case_studies {margin-left:50px; margin-top:10px;}
 #case_studies h2 {color:#fff;}
+
 
 .case-study {margin:20px auto;}
 
