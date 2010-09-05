@@ -3,10 +3,14 @@
 {% load core_tags %}
 {% load social_bookmarking_tags %}
 
+{% block extrahead %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/default.css" />
+{% endblock %}
+
 {% block title %}{{ flatpage.title }}{% endblock title %}
 
-
 {% block content %}
+<div class="content">
 
 <h1>{{ flatpage.title }}</h1>
 
@@ -23,5 +27,6 @@
 {{ flatpage.content|safe }}
 
 {% show_bookmarks flatpage.title flatpage %}
+</div>
 
 {% endblock content %}
