@@ -1,0 +1,9 @@
+django==1.2.1
+PIL
+django-debug-toolbar==0.8.3
+django_extensions==0.4.1
+-e git://github.com/pydanny/django-social-bookmarking#egg=django_social_bookmarking
+docutils
+django-taggit==0.8.0
+django-wysiwyg==0.1.
+south==0.7.2
