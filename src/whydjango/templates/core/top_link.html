@@ -1,4 +1,4 @@
-<ul>  
+<ul id="top_links">  
     <li><a href="/">Home</a></li>
     {% for link in links %}
         <li><a id="{{ link.title|slugify }}" href="/{{ link.title|slugify }}/">{{ link.title }}</a></li>    
