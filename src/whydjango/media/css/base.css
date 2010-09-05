@@ -25,7 +25,7 @@ a:hover {text-decoration:underline;}
 
 #title {position:absolute; left:700px; top:130px;}
 
-#content {width:800px; margin:0 auto; padding-right:40px;}
+#main_container {margin:0; position:absolute; left:0; top:153px;}
 
 #footer {border-top:6px #94da3a;font-size:70%; width:800px; margin:10px auto;}
 
