@@ -37,13 +37,9 @@ def side_nav(flatpage):
         text += '<li><a href="%s">%s</a></li>' % (page.get_absolute_url(), page.title)
     text += '</ul></li>'
     return text
-    
-#@register.simple_tag
-#def case_study():
-#    return CaseStudy.objects.get(featured=True)
 
 @register.tag
-def case_study(parser, token):
+def set_case_studies(parser, token):
     return CaseStudyNode()
 
 class CaseStudyNode(template.Node):
@@ -52,7 +48,7 @@ class CaseStudyNode(template.Node):
 
     def render(self, context):
         try:
-            context['case_study'] = CaseStudy.objects.get(featured=True)
+            context['case_studies'] = CaseStudy.objects.filter(featured=True)
         except CaseStudy.DoesNoExist:
-            context['case_study'] = None
+            context['case_studies'] = None
         return ""            

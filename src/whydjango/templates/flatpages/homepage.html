@@ -11,15 +11,21 @@
 <div id="case_studies">
 <h2>case studies</h2>
 
-<div class="case-study">
-    <div class="case-study-title">National Geographic</div>
-    <div class="case-study-image"><img src="{{ MEDIA_URL }}img/case_study_natgeo.png" width="300px" /></div>                
-</div>
+{% set_case_studies %}
 
-<div class="case-study">
-    <div class="case-study-title">National Geographic</div>
-    <div class="case-study-image"><img src="{{ MEDIA_URL }}img/case_study_natgeo.png" width="300px" /></div>                
-</div>
+
+{% for case_study in case_studies %}
+
+    <div class="case-study">
+        <div class="case-study-title"><a href="{{ case_study.get_absolute_url }}">{{ case_study.title }}</a></div>
+        <div class="case-study-image"><a href="{{ case_study.get_absolute_url }}"><img src="{{ MEDIA_URL }}{{ case_study.image }}" width="300px" /></a></div>
+    </div>
+
+{% empty %}
+
+    <h1>No feature case studies</h1>
+
+{% endfor %}
 
 </div>
 
