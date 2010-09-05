@@ -1,0 +1,6 @@
+#case_studies {float:right; background:#1c475c url('../img/sidecol_gradient.png') repeat-y; width:410px;}
+#case_studies h2 {color:#fff;}
+
+.case-study {margin:20px auto;}
+
+.case-study-title {font-size:120%; font-weight:bold; color:#caf132; text-transform:uppercase;}

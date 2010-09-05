@@ -14,7 +14,10 @@ h6 {font-size:170%;}
 a, a:visited, a:hover {color:#89a02c; font-weight:900; text-decoration:none;}
 a:hover {text-decoration:underline;}
 
-#page_header {background:#e2fcfc url('../img/header_gradient.png') repeat-x; height:210px;}
+#page_header {background:#fff url('../img/header_gradient.png') repeat-x; height:210px;}
+
+#icon_buttons {float:right; margin:40px;}
+#icon_buttons td {text-align:center; font-weight:bold; font-size:78%; width:100px;}
 
 #logo {margin:30px 50px 0 20px; }
 
@@ -22,4 +25,7 @@ a:hover {text-decoration:underline;}
 
 #title {position:absolute; left:700px; top:130px;}
 
-#content {width:800px; margin:0 auto;}
+#content {width:800px; margin:0 auto; padding-right:40px;}
+
+#footer {border-top:6px #94da3a;font-size:70%; width:800px; margin:10px auto;}
+

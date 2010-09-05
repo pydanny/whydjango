@@ -2,17 +2,25 @@
 
 {% load core_tags %}
 {% load social_bookmarking_tags %}
-    
+
+{% block extrahead %}
+<link rel="stylesheet" href="{{ MEDIA_URL }}css/homepage.css" />
+{% endblock %}
+
 {% block content %}
-
-{% case_study %}
-
-<h1>Why Django</h1>
+<div id="case_studies">
+<h2>case studies</h2>
 
 <div class="case-study">
-        <div class="case-study-title">{{ case_study.title }}</div>
-        <div class="case-study-image"><img src="{{ MEDIA_URL }}{{ case_study.image }}" /></div>                
-        <div class="case-study-description">{{ case_study.description }}</div>
+    <div class="case-study-title">National Geographic</div>
+    <div class="case-study-image"><img src="{{ MEDIA_URL }}img/case_study_natgeo.png" width="300px" /></div>                
+</div>
+
+<div class="case-study">
+    <div class="case-study-title">National Geographic</div>
+    <div class="case-study-image"><img src="{{ MEDIA_URL }}img/case_study_natgeo.png" width="300px" /></div>                
+</div>
+
 </div>
 
 <div class="content">
