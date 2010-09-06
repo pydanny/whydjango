@@ -9,7 +9,7 @@
 <h1>Submit Case Study</h1>
 
 <div class="content">
-<form action="{% url case_study_submission %}" method="post">
+<form action="{% url case_study_submission %}" method="post" class="uniForm">
     {% csrf_token %}
     <table>
     <!-- replace with duf ASAP -->
@@ -19,6 +19,12 @@
 </form>
 
 </div>
+
+<script type="text/javascript">
+    $(function() {   
+        $("#id_name").focus();
+    });         
+</script>
 
 {% endblock content %}
 

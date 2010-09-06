@@ -12,7 +12,7 @@ def case_study_submission(request, template_name="casestudies/submit.html"):
 
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse("case_study_submission"))
+            return HttpResponseRedirect(reverse("submit_message"))
 
         return render_to_response(template_name, { 
             "form": form,
