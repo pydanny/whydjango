@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="{{ MEDIA_URL }}css/homepage.css" />
 {% endblock %}
 
-{% block content %}
+{% block main_container_content %}
 <div id="right_side_col">
 <div id="case_studies">
 <h2>case studies</h2>
@@ -31,7 +31,7 @@
 </div>
 </div>
 
-<div class="content">
+<div class="col1_content">
 {{ flatpage.content|safe }}
 {% show_bookmarks flatpage.title flatpage %}
 </div>
@@ -39,4 +39,4 @@
 
 
 
-{% endblock content %}
+{% endblock main_container_content %}

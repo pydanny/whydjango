@@ -1,11 +1,8 @@
-{% extends 'base.html' %}
-
-{% load core_tags %}
+{% extends '1col_base.html' %}
 
 {% block title %}Case Study for {{ object.title }}{% endblock title %}
 
-{% block content %}
-
+{% block col1_content %}
 
 <h1>Case Study for <a href="{{ object.url }}">{{ object.title }}</a></h1>
 
@@ -25,4 +22,4 @@
 
 </div>
 
-{% endblock content %}
+{% endblock col1_content %}

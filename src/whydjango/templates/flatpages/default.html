@@ -1,22 +1,14 @@
-{% extends 'base.html' %}
+{% extends '1col_base.html' %}
 
-{% load core_tags %}
 {% load social_bookmarking_tags %}
-
-{% block extrahead %}
-<link rel="stylesheet" href="{{ MEDIA_URL }}css/default.css" />
-{% endblock %}
 
 {% block title %}{{ flatpage.title }}{% endblock title %}
 
-{% block content %}
-<div class="content">
+{% block col1_content %}
 
-<h1>{{ flatpage.title }}</h1>
+    <h1>{{ flatpage.title }}</h1>
 
-{{ flatpage.content|safe }}
+    {{ flatpage.content|safe }}
 
-{% show_bookmarks flatpage.title flatpage %}
-</div>
-
-{% endblock content %}
+    {% show_bookmarks flatpage.title flatpage %}
+{% endblock col1_content %}
