@@ -33,9 +33,10 @@
 
 <div class="content">
 {{ flatpage.content|safe }}
+{% show_bookmarks flatpage.title flatpage %}
 </div>
 
-{% show_bookmarks flatpage.title flatpage %}
+
 
 
 {% endblock content %}

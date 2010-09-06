@@ -14,16 +14,6 @@
 
 <h1>{{ flatpage.title }}</h1>
 
-<ul id="side_nav">
-{% side_nav flatpage  %}
-</ul>
-
-<div id="breadcrumbs">
-    
-    {% breadcrumbs flatpage %}
-    
-</div>
-
 {{ flatpage.content|safe }}
 
 {% show_bookmarks flatpage.title flatpage %}
