@@ -35,6 +35,5 @@ urlpatterns = patterns("",
         "submit_message",
 
     )
-    
- 
+
 )
