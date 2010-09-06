@@ -5,5 +5,6 @@ django_extensions==0.4.1
 -e git://github.com/pydanny/django-social-bookmarking#egg=django_social_bookmarking
 docutils
 django-taggit==0.8.0
-django-wysiwyg==0.1.
+django-wysiwyg==0.1.0
 south==0.7.2
+django-uni-form

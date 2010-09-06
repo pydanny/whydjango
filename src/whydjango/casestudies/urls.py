@@ -1,6 +1,7 @@
 from django.conf.urls.defaults import * 
 
 from django.views.generic.list_detail import object_list, object_detail
+from django.views.generic.simple import direct_to_template
 
 from whydjango.casestudies.models import CaseStudy
 
@@ -27,6 +28,13 @@ urlpatterns = patterns("",
             )        
     ),
     
+    (
+        r"submit-message",
+        direct_to_template,
+        dict(template="casestudies/submit_message.html"),        
+        "submit_message",
 
-
+    )
+    
+ 
 )
