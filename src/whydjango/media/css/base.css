@@ -1,3 +1,11 @@
+/* Sticky footer from http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
+* {margin: 0;}
+html, body {height: 100%;}
+.wrapper {min-height: 100%;height: auto !important;height: 100%;margin: 0 auto -4em;}
+.footer, .push {height: 4em;}
+.footer, .push {clear: both;}
+
+/* General */
 body {font-family:Helvetica LT, Helvetica, Arial, sans-serif; font-size:84%; color:#241c1c;}
 
 body, p, div {line-height:1.5;}
@@ -29,5 +37,5 @@ a:hover {text-decoration:underline;}
 
 .col1_content {margin:40px 480px 0 80px;}
 
-#footer {border-top:6px #94da3a;font-size:70%; width:800px; margin:10px auto;}
+#footer {border-top:6px #94da3a;font-size:70%; width:600px; margin-top:10px; margin-left:40px;}
 
