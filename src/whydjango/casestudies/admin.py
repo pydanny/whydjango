@@ -1,14 +1,8 @@
 from django.contrib import admin 
 
-from whydjango.casestudies.models import CaseStudy, CaseStudyImage
+from whydjango.casestudies.models import CaseStudy, CaseStudyImage, CaseStudySubmission
 
 
-class CaseStudyAdmin(admin.ModelAdmin):
-    pass
-    
-admin.site.register(CaseStudy, CaseStudyAdmin)
-
-class CaseStudyImageAdmin(admin.ModelAdmin):
-    pass
-
-admin.site.register(CaseStudyImage, CaseStudyImageAdmin)
+admin.site.register(CaseStudy)
+admin.site.register(CaseStudyImage)
+admin.site.register(CaseStudySubmission)

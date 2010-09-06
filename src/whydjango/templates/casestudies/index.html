@@ -6,9 +6,9 @@
 
 {% block content %}
 
-{% top_links %}
-
 <h1>Case Studies</h1>
+
+<div class="content">
 
 {% for object in object_list %}
     <p>
@@ -17,5 +17,6 @@
         {{ object.description }}
     </p>
 {% endfor %}
+</div>
 
 {% endblock content %}

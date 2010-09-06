@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load core_tags %}
+
+{% block title %}Submit Case Study{% endblock title %}
+
+{% block content %}
+
+<h1>Submit Case Study</h1>
+
+<div class="content">
+<form action="{% url case_study_submission %}" method="post">
+    {% csrf_token %}
+    <table>
+    <!-- replace with duf ASAP -->
+    {{ form }}
+    </table>
+    <input type="submit" value="submit">    
+</form>
+
+</div>
+
+{% endblock content %}
+

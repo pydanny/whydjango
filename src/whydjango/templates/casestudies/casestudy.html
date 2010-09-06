@@ -6,7 +6,6 @@
 
 {% block content %}
 
-{% top_links %}
 
 <h1>Case Study for <a href="{{ object.url }}">{{ object.title }}</a></h1>
 
@@ -16,11 +15,14 @@
     
 </div>
 
+<div class="content">
 
-<p class="pub_date">Posted on {{ object.pub_date|date:"SHORT_DATE_FORMAT" }}</p>
+    <p class="pub_date">Posted on {{ object.pub_date|date:"SHORT_DATE_FORMAT" }}</p>
 
-<p class="description">{{ object.description }}</p>
+    <p class="description">{{ object.description }}</p>
 
-<div class="body">{{ object.content|safe }}</div>
+    <div class="body">{{ object.content|safe }}</div>
+
+</div>
 
 {% endblock content %}

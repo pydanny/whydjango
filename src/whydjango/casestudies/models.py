@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 from django_extensions.db.fields import AutoSlugField
 from taggit.managers import TaggableManager
 
-from whydjango.models import StandardModel
+from whydjango.models import StandardModel    
 
 class BaseModel(StandardModel):
     title           = models.CharField(_('title'), max_length=50)
@@ -50,3 +50,14 @@ class CaseStudyImage(BaseModel):
     class Meta:
         verbose_name = _('Case Study Image')
         verbose_name_plural = _('Case Study Images')
+
+class CaseStudySubmission(StandardModel):
+    name            = models.CharField(_('Your name'), max_length=100)    
+    email           = models.EmailField(_("Email"))
+    company          = models.CharField(_('Company'), max_length=100, blank=True)    
+    title           = models.CharField(_('Title'), help_text="Title of case study", max_length=100)
+    description     = models.TextField(_('Description'), help_text="A basic description of your Case Study")
+    submitted       = models.DateTimeField(_('date submitted'), default=datetime.datetime.today, editable=False)
+
+    def __unicode__(self):
+        return self.title
