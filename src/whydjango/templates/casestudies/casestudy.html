@@ -1,5 +1,7 @@
 {% extends '1col_base.html' %}
 
+{% load social_bookmarking_tags %}
+
 {% block title %}Case Study for {{ object.title }}{% endblock title %}
 
 {% block col1_content %}
@@ -21,5 +23,7 @@
     <div class="body">{{ object.content|safe }}</div>
 
 </div>
+
+{% show_bookmarks object.title object %}
 
 {% endblock col1_content %}
