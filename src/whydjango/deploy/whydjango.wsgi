@@ -10,7 +10,7 @@ site_packages = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.
 site_packages = '../../../../whydjango-env/lib/python2.6/site-packages'
 site.addsitedir(os.path.abspath(site_packages))
 
-sys.path.insert(0, abspath(join(dirname(__file__), "../../")))
+sys.path.insert(0, abspath(join(dirname(__file__), "../../../../")))
 
 from django.conf import settings
 os.environ["DJANGO_SETTINGS_MODULE"] = "whydjango.settings"
