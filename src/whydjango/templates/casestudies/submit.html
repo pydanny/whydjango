@@ -10,6 +10,7 @@
 <h1>Submit Case Study</h1>
 
 <div class="content">
+<div class="content-form">
 <form action="{% url case_study_submission %}" method="post" class="uniForm">
     {% csrf_token %}
     <fieldset>
@@ -17,7 +18,7 @@
     </fieldset>    
     <input type="submit" value="submit">    
 </form>
-
+</div>
 </div>
 {% include "uni_form/includes.html" %}
 
