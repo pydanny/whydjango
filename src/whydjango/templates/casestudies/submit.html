@@ -1,24 +1,25 @@
-{% extends 'base.html' %}
+{% extends '1col_base.html' %}
 
 {% load core_tags %}
+{% load uni_form_tags %}
 
 {% block title %}Submit Case Study{% endblock title %}
 
-{% block content %}
+{% block col1_content %}
 
 <h1>Submit Case Study</h1>
 
 <div class="content">
 <form action="{% url case_study_submission %}" method="post" class="uniForm">
     {% csrf_token %}
-    <table>
-    <!-- replace with duf ASAP -->
-    {{ form }}
-    </table>
+    <fieldset>
+    {{ form|as_uni_form }}
+    </fieldset>    
     <input type="submit" value="submit">    
 </form>
 
 </div>
+{% include "uni_form/includes.html" %}
 
 <script type="text/javascript">
     $(function() {   
@@ -26,5 +27,5 @@
     });         
 </script>
 
-{% endblock content %}
+{% endblock col1_content %}
 

@@ -91,6 +91,7 @@ INSTALLED_APPS = (
     'taggit',
     'south',
     'django_wysiwyg',
+    'uni_form',    
     'whydjango.books',    
     'whydjango.casestudies',
     'whydjango.core',    
