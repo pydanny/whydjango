@@ -6,9 +6,12 @@
 
 {% block col1_content %}
 
+
     <h1>{{ flatpage.title }}</h1>
 
     {{ flatpage.content|safe }}
 
+
     {% show_bookmarks flatpage.title flatpage %}
+    
 {% endblock col1_content %}

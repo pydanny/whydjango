@@ -51,10 +51,17 @@ class CaseStudyImage(BaseModel):
         verbose_name = _('Case Study Image')
         verbose_name_plural = _('Case Study Images')
 
+SUBMISSION_TYPE_CHOICES = (
+    ("article", "Article"),
+    ("case study", "Case Study"),    
+)
+
+
 class CaseStudySubmission(StandardModel):
     name            = models.CharField(_('Your name'), max_length=100)    
     email           = models.EmailField(_("Email"))
-    company          = models.CharField(_('Company'), max_length=100, blank=True)    
+    company         = models.CharField(_('Company'), max_length=100, blank=True)
+    submission_type = models.CharField(_('Type'), max_length=100, choices=SUBMISSION_TYPE_CHOICES)
     title           = models.CharField(_('Title'), help_text="Title of case study", max_length=100)
     description     = models.TextField(_('Description'), help_text="A basic description of your Case Study")
     submitted       = models.DateTimeField(_('date submitted'), default=datetime.datetime.today, editable=False)
