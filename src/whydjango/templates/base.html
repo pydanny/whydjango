@@ -17,31 +17,28 @@
 <div class="wrapper">
 <table id="icon_buttons">
 <tr>
-<td><img class="icon_button" src="{{ MEDIA_URL }}img/btn_download.png" alt="Download Django" /></td>
-<td><img class="icon_button" src="{{ MEDIA_URL }}img/btn_download.png" alt="Download Django" /></td>
-<td><img class="icon_button" src="{{ MEDIA_URL }}img/btn_download.png" alt="Download Django" /></td>
-<td><img class="icon_button" src="{{ MEDIA_URL }}img/btn_download.png" alt="Download Django" /></td>
+<td><a href="/articles/"><img class="icon_button" src="{{ MEDIA_URL }}img/btn_download.png" alt="Articles" /></a></td>
+<td><a href="/books/"><img class="icon_button" src="{{ MEDIA_URL }}img/btn_download.png" alt="Books" /></a></td>
+<td><a href="/case-studies/"><img class="icon_button" src="{{ MEDIA_URL }}img/btn_download.png" alt="Case Studies" /></a></td>
+<td><a href="/download/"><img class="icon_button" src="{{ MEDIA_URL }}img/btn_download.png" alt="Download Django" /></a></td>
 </tr>
 <tr>
-<td>DOWNLOAD</td>
-<td>DOWNLOAD</td>
-<td>DOWNLOAD</td>
+<td>ARTICLES</td>
+<td>BOOKS</td>
+<td>CASE STUDIES</td>
 <td>DOWNLOAD</td>
 </tr>
 </table>
 
-<div id="page_header">
+<div id="page_header"><a href="/">
 <img id="logo" src="{{ MEDIA_URL }}img/logo.png" alt="Why Django?" />
+</a>
 </div>
 
 <div id="main_container">
 {% block main_container_content %}{% endblock main_container_content %}
 </div>
 <div class="push"></div>
-</div>
-
-<div id="footer">
-© 2010 Django Software Foundation unless otherwise noted. Django is a registered trademark of the Django Software Foundation.  Website created by <a href="http://www.pydanny.com">Daniel Greenfeld</a>, design by <a href="http://www.fuzzyrainbow.com">Audrey Roy</a>, powered by <a href="http://www.djangoproject.com">Django</a>.
 </div>
 
 </body>

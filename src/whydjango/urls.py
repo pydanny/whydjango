@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     (r'^books/', include('whydjango.books.urls')),    
     (r'^case-studies/', include('whydjango.casestudies.urls')),
     url(
-        regex = "submit-case-study/",
+        regex = "submit-proposal/",
         view  = case_study_submission,
         name = "case_study_submission"
     )    

@@ -18,7 +18,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'dev.db',                      # Or path to database file if using sqlite3.
+        'NAME': '/home/whydjango/whydjango/src/whydjango/db/dev.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -42,7 +42,7 @@ MEDIA_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "media"))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, "static"))
 
-ADMIN_MEDIA_PREFIX = '/admin_media/'
+ADMIN_MEDIA_PREFIX = '/site_media/admin/'
 
 SECRET_KEY = 'd^5@ux-(-r7-*y791uwun(xq+h7p+=##9&jv#p627$eud!^6bd'
 

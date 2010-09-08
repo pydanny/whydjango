@@ -1,12 +1,14 @@
-{% extends 'base.html' %}
+{% extends '1col_base.html' %}
 
 {% load core_tags %}
 
 {% block title %}Books{% endblock title %}
 
-{% block content %}
+{% block col1_content %}
 
+{% comment %}
 {% top_links %}
+{% endcomment %}
 
 <h1>Books</h1>
 
@@ -40,4 +42,4 @@
 {% endfor %}
 
 
-{% endblock content %}
+{% endblock col1_content %}
